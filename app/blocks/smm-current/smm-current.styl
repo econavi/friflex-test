@@ -1,0 +1,19 @@
+.smm-current
+	display inline-block
+	vertical-align top
+	padding 10px 25px 12px
+	
+	font-size $font-md
+	line-height normal
+	fontFamily($font-default-bold)
+	text-transform uppercase
+	
+	background $color-icon-default
+	border-radius 19px
+	color $color-icon-text
+	
+	+media($screen-mid)
+		cursor default
+
+		&:hover
+			color darken($color-icon-text, 20%)

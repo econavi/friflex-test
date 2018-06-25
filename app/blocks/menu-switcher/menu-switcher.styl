@@ -1,0 +1,60 @@
+$menu-switcher-font-size = $font-lg
+$menu-switcher-text-color = $gray-blue
+$menu-switcher-icon-color = $gray-blue
+$menu-switcher-icon-width = 18px
+
+.menu-switcher
+	position relative
+
+	margin 0
+	padding 0
+	padding-left 1.5em
+	z-index 1
+	
+	font-family inherit
+	font-size $menu-switcher-font-size
+	font-weight bold
+	line-height 1
+	text-transform uppercase
+	
+	color $menu-switcher-text-color
+	border 0
+	background none
+	
+	cursor pointer
+	
+	&::before
+		content ''
+		position absolute
+		top 50%
+		left 0
+		
+		display block
+		width $menu-switcher-icon-width
+		height 2px
+		
+		background $menu-switcher-icon-color
+		
+		transform translateY(-60%)
+		box-shadow 0 5px $menu-switcher-icon-color, 0 -5px $menu-switcher-icon-color
+	
+	&_opend
+		&::before,
+		&::after
+			content ''
+			position absolute
+			top 50%
+			left 0
+			
+			display block
+			width $menu-switcher-icon-width
+			height 2px
+			
+			background $menu-switcher-icon-color
+			box-shadow none
+		
+		&::before
+			transform translateY(-60%) rotate(45deg)
+		
+		&::after
+			transform translateY(-60%) rotate(-45deg)

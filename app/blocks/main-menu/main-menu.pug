@@ -1,0 +1,28 @@
+-
+	var list = [
+
+		{	name: 'CAMPAIGNS',
+			url: 'javascript:void(0)',
+			moreClass: 'main-menu__link_active'
+		},
+		
+		{	name: 'BLOGGERS',
+			url: 'javascript:void(0)'
+		},
+		
+		{	name: 'Smart Contracts',
+			url: 'javascript:void(0)'
+		}
+
+	];
+
+
+mixin navItem(url, name, moreClass)
+	li.main-menu__item
+		a.main-menu__link(href=url class=moreClass)= name
+
+
+nav.main-menu
+	ul.main-menu__list
+		each i in list
+			+navItem(i.url, i.name, i.moreClass)

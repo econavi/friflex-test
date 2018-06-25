@@ -1,0 +1,21 @@
+.header-nav
+	+media($screen-mid)
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		align-items center
+		align-content space-between
+
+	&__menu
+		margin-bottom 30px
+		
+		+media($screen-mid)
+			margin 20px 0
+			flex-grow 2
+		
+		+media($screen-xxl)
+			margin 0
+	
+	&__user-panel
+		flex-grow 1
+			

@@ -1,0 +1,45 @@
+header.page-header
+	.header-container
+		.page-header__in
+			.page-header__switcher-menu
+				button.menu-switcher(type='button') Menu
+			
+			a.page-header__logo(href='javascript:void(0)')
+				include ../logo/logo.pug
+			
+			.page-header__user-profile
+				button.user-profile(type='button')
+					span.user-profile__name Ronald Snypes
+					img.user-profile__avatar(src= path + 'assets/img/content/user-avatar.png' width='38' height='38' alt='User avatar')
+			
+			.header-nav.page-header__nav
+				.header-nav__menu
+					include ../main-menu/main-menu.pug
+				
+				.header-nav__user-panel
+					.user-panel
+						.user-controls.user-panel__controls
+							.user-controls__item
+								button(type='button' title='Show Message').icon
+									span.icon__hidden-text Message
+									<svg class='icon__shape' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.9 12.5"><path d="M1.3.7C.8.3.9 0 1.5 0h13c.6 0 .7.3.2.7L8.9 5.8c-.2.3-.6.4-.9.3-.3 0-.7-.1-1-.3L1.3.7zm13.8 1.4c.5-.4.8-.2.8.5v8.7c0 .7-.5 1.2-1.1 1.2H1.1C.5 12.5 0 12 0 11.3V2.5c0-.7.4-.9.8-.5l6.3 5.3c.2.3.6.4.9.4.3 0 .6-.1.8-.3l6.3-5.3z"/></svg>
+							.user-controls__item
+								button(type='button' title='Show Message').icon
+									span.icon__current 4
+									span.icon__hidden-text Message
+									<svg class='icon__shape' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.9 12.5"><path d="M1.3.7C.8.3.9 0 1.5 0h13c.6 0 .7.3.2.7L8.9 5.8c-.2.3-.6.4-.9.3-.3 0-.7-.1-1-.3L1.3.7zm13.8 1.4c.5-.4.8-.2.8.5v8.7c0 .7-.5 1.2-1.1 1.2H1.1C.5 12.5 0 12 0 11.3V2.5c0-.7.4-.9.8-.5l6.3 5.3c.2.3.6.4.9.4.3 0 .6-.1.8-.3l6.3-5.3z"/></svg>
+							
+							.user-controls__item
+								button(type='button' title='Show notification').icon.icon_active
+									span.icon__hidden-text Notification
+									<svg class='icon__shape' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16.8"><path d="M7 16.8c.9 0 1.6-.8 1.6-1.7H5.4c0 .9.7 1.7 1.6 1.7zm5.4-5V7.1c0-2.6-1.7-4.7-4.1-5.3v-.5C8.2.6 7.7 0 7 0S5.8.6 5.8 1.3v.6c-2.4.5-4.2 2.6-4.2 5.2v4.6L0 13.4v.8h14v-.8l-1.6-1.6z"/></svg>
+							
+							.user-controls__item.user-controls__smm-current
+								span.smm-current 986 SMM
+						
+						.user-panel__profile
+							button.user-profile(type='button')
+								span.user-profile__name Ronald Snypes
+								img.user-profile__avatar(src= path + 'assets/img/content/user-avatar.png' width='38' height='38' alt='User avatar')
+
+					

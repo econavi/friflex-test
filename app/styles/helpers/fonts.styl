@@ -1,0 +1,65 @@
+// Миксин для подключения
+fontFace($path, $name, $weight=normal, $style=normal)
+	@font-face
+		font-family '' + $name + ''
+		src local('' + $name + ''),
+				url('../assets/fonts/' + $path + '/' + $name + '.woff2') format('woff2'),
+				url('../assets/fonts/' + $path + '/' + $name + '.woff') format('woff'),
+				url('../assets/fonts/' + $path + '/' + $name + '.ttf') format('truetype')
+		font-weight $weight
+		font-style $style
+		font-display swap
+
+// Подключение шрифтов
+fontFace(ubuntu, ubuntu-regular, 400)
+fontFace(ubuntu, ubuntu-regular-italic, 400, italic)
+
+fontFace(ubuntu, ubuntu-medium, 500)
+fontFace(ubuntu, ubuntu-medium-italic, 500, italic)
+
+fontFace(ubuntu, ubuntu-bold, 700)
+fontFace(ubuntu, ubuntu-bold-italic, 700, italic)
+
+// Переменные на проект
+$font-default-name = ubuntu
+$font-default-regular        = ($font-default-name + '-regular')
+$font-default-regular-italic = ($font-default-name + '-regular-italic')
+$font-default-medium         = ($font-default-name + '-medium')
+$font-default-medium-italic  = ($font-default-name + '-medium-italic')
+$font-default-bold           = ($font-default-name + '-bold')
+$font-default-bold-italic    = ($font-default-name + '-bold-italic')
+
+// Миксин для назначения
+fontFamily($name)
+	font-family '' + $name + '', sans-serif
+
+/***********************************	
+	
+	Начертание шрифтов:
+	
+	100 - Thin (тонкое начертание)
+	200 - Extra-Light (сверхсветлое)
+	300 - Light (светлое)
+	400 - Regular (нормальное)
+	500 - Medium (среднее)
+	600 - Semi-Bold (полужирное)
+	700 - Bold (жирное)
+	800 - Extra-Bold (сверхжирное)
+	900 - Black (тяжёлое)
+
+	Пример подключения:
+	
+	@font-face
+		font-family 'RobotoCondensedBold'
+		src url('../assets/fonts/RobotoCondensed/RobotoCondensedBold.woff2') format('woff2'),
+				url('../assets/fonts/RobotoCondensed/RobotoCondensedBold.woff') format('woff'),
+				url('../assets/fonts/RobotoCondensed/RobotoCondensedBold.ttf') format('truetype')
+		font-weight 700
+		font-style normal
+		font-display swap
+		
+
+***********************************/
+
+
+

@@ -1,0 +1,58 @@
+.page-header
+	padding 20px 0
+	
+	&__in
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
+		
+		+media($screen-mid)
+			flex-wrap nowrap
+			align-items center
+			justify-content space-between
+
+	&__switcher-menu
+		display inline-block
+		vertical-align middle
+		margin-right 45px
+		
+		+media($screen-mid)
+			display none
+			
+	
+	&__logo
+		display inline-block
+		vertical-align middle
+		width 80px
+		height auto
+		
+		text-decoration none
+		
+		+media($screen-mid)
+			flex-shrink 0
+			width 142px
+	
+	&__user-profile
+		position relative
+		top -5px
+		margin-left auto
+		
+		+media($screen-mid)
+			display none
+	
+	&__user-profile .user-profile__name
+		display none
+		
+		+media($screen-sm)
+			display inline-block
+		
+	&__nav
+		width 100%
+		padding-top 30px
+		text-align center
+		
+		+media($screen-mid)
+			flex-grow 1
+			width auto
+			padding 0
+			text-align left

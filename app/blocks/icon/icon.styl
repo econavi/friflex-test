@@ -1,0 +1,65 @@
+.icon
+	position relative
+	display inline-block
+	vertical-align top
+	
+	width 38px
+	height 38px
+	
+	border none
+	border-radius 50%
+	background $color-icon-default
+	
+	// overflow hidden
+	cursor pointer
+	
+	transition $transition-default
+	
+	&_active
+		background $color-brand
+
+	&_active &__shape
+		fill: $color-icon-active-shape-default
+	
+	&__shape
+		position absolute
+		top 50%
+		left 50%
+		z-index 1
+		
+		width 40%
+		height 40%
+		
+		fill: $color-icon-shape-default
+		
+		transform translate(-50%, -50%)
+	
+	&__current
+		position absolute
+		top -5px
+		right -5px
+		z-index 2
+		
+		width 20px
+		height 20px
+		
+		text-align center
+		line-height 20px
+		
+		border-radius 50%
+		background $color-icon-current
+		color $color-icon-active-shape-default
+
+	&__hidden-text
+		visualli-hidden()
+	
+	+media($screen-mid)
+		&:hover
+			background $color-brand
+		
+		&:hover &__shape
+			fill: $color-icon-shape-hover-default
+		
+		&:active
+			background none
+	

@@ -1,0 +1,25 @@
+.user-panel
+	+media($screen-mid)
+		display flex
+		justify-content space-between
+
+	&__controls
+		display inline-block
+		padding 20px 0
+		border-top 1px solid $pinkish-grey
+		border-bottom 1px solid $pinkish-grey
+		
+		+media($screen-mid)
+			flex-grow 1
+			padding 0
+			border none
+	
+	&__profile
+		display none
+		padding-top 15px
+		
+		+media($screen-mid)
+			display inline-block
+			margin-left 36px
+			padding-top 0
+		

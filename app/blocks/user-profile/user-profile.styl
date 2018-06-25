@@ -1,0 +1,61 @@
+.user-profile
+	position relative
+	display inline-block
+	vertical-align top
+	
+	padding 0
+	padding-right 15px
+	
+	fontFamyli($font-default-bold)
+	font-weight 700
+	font-size $font-md
+	line-height normal
+	
+	color $color-titles-default
+	border none
+	background none
+	
+	cursor pointer		
+	
+	&:hover
+		&::after
+			border-color $color-shevron-hover
+	
+	+media($screen-mid)
+		display flex
+		align-items center
+	
+	&::after
+		content ''
+		display none
+		position absolute
+		top 50%
+		right 0
+		
+		width 8px
+		height 8px
+		
+		border 2px solid $color-shevron
+		border-top none
+		border-left none
+		
+		transform translate(0, -50%) rotate(-315deg)
+		
+		+media($screen-mid)
+			display block
+	
+	&__name
+		display inline-block
+		vertical-align middle
+		margin-right 10px
+		text-align left
+		
+		// Хак под safari, иначе не умещает display inline-block и разбивает строку
+		letter-spacing 0.1px
+	
+	&__avatar
+		display inline-block
+		vertical-align middle
+		width 38px
+		height 38px
+		border-radius 50%

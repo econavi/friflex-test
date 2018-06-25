@@ -1,0 +1,59 @@
+.main-menu
+	&__list
+		padding 0
+		margin 0
+		font-size 0
+		list-style-type none
+		
+		+media($screen-mid)
+			text-align right
+	
+	&__item
+		display block
+		font-size $font-lg
+		line-height normal
+		
+		+media($screen-mid)
+			display inline-block
+			vertical-align top
+			
+	
+	&__link
+		display inline-block
+		padding 12px 30px
+		fontFamily($font-default-bold)
+		font-weight 700
+		text-decoration none
+		text-transform uppercase
+		
+		color $color-text-default
+		
+		+media($screen-mid)
+
+			&:hover
+				color lighten($color-text-default, 30%)
+				transition color 0.2s
+			
+			&:active
+				color lighten($color-text-default, 90%)
+		
+		&_active
+			position relative
+			
+			&:hover
+				background none
+			
+			&::after
+				content ''
+				position absolute
+				right 0
+				bottom 0
+				left 0
+				height 2px
+				background-color red
+			
+			+media($screen-mid)
+				color lighten($color-text-default, 30%)
+				
+				&::after
+					content none
