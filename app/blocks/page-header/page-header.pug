@@ -2,7 +2,7 @@ header.page-header
 	.header-container
 		.page-header__in
 			.page-header__switcher-menu
-				button.menu-switcher(type='button') Menu
+				button.menu-switcher.js-menu-toggle(type='button') Menu
 			
 			a.page-header__logo(href='javascript:void(0)')
 				include ../logo/logo.pug
@@ -12,7 +12,7 @@ header.page-header
 					span.user-profile__name Ronald Snypes
 					img.user-profile__avatar(src= path + 'assets/img/content/user-avatar.png' width='38' height='38' alt='User avatar')
 			
-			.header-nav.page-header__nav
+			.header-nav.page-header__nav.js-menu
 				.header-nav__menu
 					include ../main-menu/main-menu.pug
 				
