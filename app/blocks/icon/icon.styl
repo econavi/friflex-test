@@ -10,13 +10,26 @@
 	border-radius 50%
 	background $color-icon-default
 	
-	// overflow hidden
 	cursor pointer
 	
-	transition $transition-default
+	transition all $transition-default
+	
+	+media($screen-mid)
+		&:hover
+			background $color-brand
+		
+		&:hover &__shape
+			fill: $color-icon-shape-hover-default
+		
+		&:active
+			background none
 	
 	&_active
 		background $color-brand
+
+		+media($screen-mid)
+			&:hover
+				background-color lighten($color-brand, 20%)
 
 	&_active &__shape
 		fill: $color-icon-active-shape-default
@@ -53,13 +66,5 @@
 	&__hidden-text
 		visualli-hidden()
 	
-	+media($screen-mid)
-		&:hover
-			background $color-brand
-		
-		&:hover &__shape
-			fill: $color-icon-shape-hover-default
-		
-		&:active
-			background none
+
 	

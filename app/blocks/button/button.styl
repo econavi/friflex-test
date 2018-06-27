@@ -1,0 +1,40 @@
+$transition-button-hover = $transition-default
+$color-button-border = $color-brand
+$color-button-bg = $color-brand
+
+
+.button
+	display inline-block
+	vertical-align top
+	// width 100%
+	padding 9px 42px 12px
+	
+	font inherit
+	font-weight bold
+
+	text-align center
+	text-transform uppercase
+	text-decoration none
+	
+	border 2px solid $color-button-border
+	border-radius 20px
+	background none
+	
+	transition background $transition-button-hover
+	
+	user-select none
+	cursor pointer
+
+	&_disabled, &:disabled
+		cursor default
+		opacity 0.3
+	
+	+media($screen-mid)
+	
+		&:hover
+			background lighten($color-button-bg, 20%)
+			border-color lighten($color-button-border, 20%)
+
+		&:active
+			background none
+	

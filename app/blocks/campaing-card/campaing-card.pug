@@ -1,26 +1,34 @@
 .campaing-card
 	
 	.campaing-card__header
-		h2 Your first campaign
+		h2.campaing-card__title Your first campaign
 		
-		dl 
-			dt Country:
-				dd Russia
-			dt Category:
-				dd Lifestyle, Sport, Food
+		dl.campaing-card__props-list
+			.campaing-card__props-item
+				dt.campaing-card__props-name Country:
+					dd.campaing-card__props-value Russia
+			.campaing-card__props-item
+				dt.campaing-card__props-name Category:
+					dd.campaing-card__props-value Lifestyle, Sport, Food
+
+		a.campaing-card__fb-link(href='javascript:void(0)')
+			span.text-hidden facebook
 	
 	.campaing-card__picture
 		img(src='assets/img/content/company-card.png' alt='company' width='288' height='183')
 	
 	.campaing-card__body
-		h3 Description
-		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, accusantium?
+		h3.campaing-card__description-title Campaign Description:
+		p.campaing-card__description-text Firebelly Outfitters is a family owned, Veteran owned business created out of our passion for spending family time outdoors. Our camping accessories for campers, RV, boats, and marine are made right here in the U.S.A. Our RV toilet accessories and text here other nation ...
 	
 	.campaing-card__footer
-		dl
-			dt Deadline: 
-				dd 28.02.18
-			dt Est. wrap
-				dd $21,345
+		dl.campaing-card__rider-list
+			.campaing-card__rider-item
+				dt.campaing-card__rider-name Deadline: 
+					dd.campaing-card__rider-value 28.02.18
+			.campaing-card__rider-item
+				dt.campaing-card__rider-name Est. wrap:
+					dd.campaing-card__rider-value $21,345
 	
-		button Respond
+		.campaing-card__respond-btn
+			a.button(href='javascript:void(0)') Respond

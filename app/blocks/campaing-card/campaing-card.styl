@@ -1,3 +1,5 @@
+$ic-fb-shape = "data:image/svg+xml,%3Csvg width='7' height='11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.1 6.1875H0V4.125h2.1V2.75C2.1.8943 3.270057 0 4.955566 0c.807373 0 1.501276.05903562 1.703492.08542187V2.0247356l-1.168986.0005225c-.916671 0-1.094163.4278107-1.094163 1.0555944V4.125H7l-.7 2.0625H4.395902V11H2.116051L2.1 6.1875z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E"
+
 campaing-card-container()
 	padding 0 16px
 
@@ -8,18 +10,131 @@ campaing-card-container()
 	background #fff
 	border-radius 16px
 	
-	xx(red) ///
-	
 	&__header
+		position relative
 		campaing-card-container()
+		padding-right 50px
+		
+	&__fb-link
+		content ''
+		position absolute
+		top 0
+		right 20px
+		
+		width 26px
+		height 26px
+		
+		border-radius 50%
+		background $color-brand url($ic-fb-shape) no-repeat center center
+		
+		transition all $transition-default
+		
+		&:hover
+			background-color lighten($color-brand, 20%)
+	
+	&__title
+		margin-top 0
+		margin-bottom 11px
+
+		fontFamily($font-default-medium)
+		font-size $font-xl
+		line-height normal
+		
+		color $color-titles-default
+	
+	&__props-list
+		margin-top 0
+		margin-bottom 16px
+
+		fontFamily($font-default-medium)
+		font-size $font-sm
+		line-height normal
+	
+	&__props-item
+		display flex
+		margin-bottom 6px
+	
+	&__props-name
+		margin-right 5.4px
+		color $cool-grey
+	
+	&__props-value
+		margin 0
+		color $charcoal-grey
+		
+	&__picture
+		margin-bottom 14px
 		
 	&__picture img	
 		width 100%
 		height auto
-		
 	
 	&__body
 		campaing-card-container()
+		padding-bottom 30px
+		font-size $font-lg
+		border-bottom 1px solid #f0f0f0
+
+	&__description-title
+		margin-top 0
+		margin-bottom 10px
+		
+		line-height 1.43
+		color $cool-grey
+	
+	&__description-text
+		margin 0
+		line-height 1.57
+		color $charcoal-grey
 	
 	&__footer
 		campaing-card-container()
+		padding-top 14px
+		text-align center
+
+	&__rider-list
+		margin-top 0
+		margin-bottom 21px
+
+		fontFamily($font-default-medium)
+		font-size $font-lg
+		line-height 1.43
+		
+		color $charcoal-grey
+	
+	&__rider-item
+		display flex
+		justify-content center
+		margin-bottom 5px
+	
+	&__rider-name
+		margin-right 6px
+		
+	&__rider-value
+		margin 0
+	
+	&__respond-btn
+		display inline-block
+		fontFamily($font-default-bold)
+		font-size $font-md
+		line-height 1.33
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
