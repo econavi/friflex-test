@@ -1,4 +1,7 @@
 .page-header
+	position relative
+	z-index $zindex-page-header
+	
 	padding 20px 0
 	
 	&__in
@@ -13,11 +16,9 @@
 			justify-content space-between
 
 	&__switcher-menu
-		z-index 200
-		
+		z-index $zindex-switcher-menu
 		display inline-block
 		vertical-align middle
-		margin-right 45px
 		
 		+media($screen-mid)
 			display none
@@ -28,23 +29,26 @@
 		vertical-align middle
 		width 80px
 		height auto
+		margin-left 30%
 		
 		text-decoration none
 		
 		+media($screen-mid)
 			flex-shrink 0
 			width 142px
+			margin-left 0
 	
 	&__user-profile
 		position relative
 		right -15px
 		margin-left auto
 		
-		+media($screen-mid)
-			display none
+		&_only-mobile
+			+media($screen-mid)
+				display none
 	
 	&__user-profile .user-profile__name
-		display none
+		visualli-hidden()
 		
 		+media($screen-sm)
 			display inline-block
@@ -57,6 +61,7 @@
 
 		width 100%
 		height 100vh
+		// height 110%
 		padding-top 40px
 		padding-bottom 50vh
 		

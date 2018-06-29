@@ -1,0 +1,157 @@
+$filter-border-color = #d0d7dd
+$filter-border-width = 1px
+
+.catalog-filter
+	position absolute
+	top 0
+	left 0
+	
+	width 100%
+	
+	font-size $font-lg
+	line-height 2.57
+
+	&__header
+		position relative
+		
+		display block
+		width 100%
+		margin 0
+		padding 0
+		border none
+		background none
+		font inherit
+
+		padding 5px
+		padding-right 26px
+		
+		overflow hidden
+		
+		white-space nowrap
+		text-overflow ellipsis
+		
+		color $cool-grey
+		border-bottom $filter-border-width solid $cool-grey
+		
+		transition color $transition-default
+		
+		cursor pointer
+		user-select none
+		
+		&::after
+			content ''
+			position absolute
+			top 50%
+			right 13px
+			
+			width 13px
+			height 13px
+			
+			border-bottom 2px solid $cool-grey
+			border-right 2px solid $cool-grey
+			
+			transform translateY(-50%) rotate(-315deg)
+			transition transform ($transition-default/3), border-color ($transition-default)
+		
+		+media($screen-mid)
+			&:hover
+				color $charcoal-grey
+				border-bottom $filter-border-width solid $charcoal-grey
+			
+				&::after
+					border-bottom-color $charcoal-grey
+					border-right-color $charcoal-grey
+	
+	&_is-active &__header
+		color $charcoal-grey
+		border-bottom 1px solid $charcoal-grey		
+		
+		&::after
+			transform translateY(-50%) rotate(-135deg)
+			border-bottom-color $charcoal-grey
+			border-right-color $charcoal-grey
+			transition border-color $transition-default
+		
+		+media($screen-mid)
+			&:hover
+				&::after
+					border-bottom-color $cool-grey
+					border-right-color $cool-grey
+
+	&__content
+		height 0
+		overflow hidden
+		transition height $transition-default
+
+	&__options-list
+		position relative
+		padding 8px
+		margin-top 15px
+		
+		background $white
+		border: solid $filter-border-width $filter-border-color
+		border-radius 5px
+
+		&::after
+			content ''
+			position absolute
+			top 2px
+			left 80%
+			
+			width 15px
+			height 15px
+			
+			border-top $filter-border-width solid $filter-border-color
+			border-left $filter-border-width solid $filter-border-color
+			background $white
+			
+			transform rotate(-315deg) translateY(-100%)
+		
+	&__option
+		position relative
+		z-index 999
+		padding 5px 15px
+		margin-bottom 2px
+		
+		color $cool-grey
+		border-radius 5px
+		
+		cursor pointer
+		user-select none
+		
+		&:last-child
+			margin-bottom 0
+		
+		+media($screen-mid)
+			transition background $transition-default
+			
+			&:hover
+				background darken($color-main-bg, 2%)
+	
+		&_is-active
+			background darken($color-main-bg, 2%)
+			cursor default
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

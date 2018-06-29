@@ -1,0 +1,20 @@
+.catalog-layout
+	&__header
+		padding-top 15px
+		padding-bottom 15px		
+		+media($screen-lg)
+			display flex
+			align-items center
+	
+	&__title
+		+media($screen-lg)
+			margin-right 66px
+			white-space nowrap
+	
+	&__filters
+		flex 1
+
+
+.no-js .catalog-layout
+	&__filters
+		display none

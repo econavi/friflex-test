@@ -6,11 +6,86 @@ block head
 	- var pageDescription = 'Описание главной страницы';
 
 block content
-	main.container
+	main.page-content.container
+		section.catalog-layout
+			.catalog-layout__header
+				h1.title.catalog-layout__title All Campaigns
+				
+				.catalog-filters.catalog-layout__filters.js-catalog-filters
+					
+					.catalog-filters__item
+						.catalog-filter
+							button.catalog-filter__header Filter by Category
+							.catalog-filter__content
+								.catalog-filter__options-list
+									.catalog-filter__option.catalog-filter__option_is-active All
+									.catalog-filter__option Sport &amp; Lifstale
+									.catalog-filter__option Food
+									.catalog-filter__option Gadget
+					
+					.catalog-filters__item
+						.catalog-filter
+							button.catalog-filter__header Filter by Price
+							.catalog-filter__content
+								.catalog-filter__options-list
+									.catalog-filter__option.catalog-filter__option_is-active All
+									.catalog-filter__option Sport &amp; Lifstale
+									.catalog-filter__option Food
+									.catalog-filter__option Gadget
 
-		h1.title All Campaigns
+					.catalog-filters__item
+						.catalog-filter
+							button.catalog-filter__header Newest to Oldest
+							.catalog-filter__content
+								.catalog-filter__options-list
+									.catalog-filter__option.catalog-filter__option_is-active All
+									.catalog-filter__option Sport &amp; Lifstale
+									.catalog-filter__option Food
+									.catalog-filter__option Gadget
+			
+			.catalog-layout__body
+				include ../../blocks/catalog-list/catalog-list.pug
 
-		.filter Filters
 
-		include ../../blocks/catalog/catalog.pug
-		
+//- block content
+//- 	main.container.page-content
+//- 		section.catalog
+//- 			.catalog__header
+//- 				h1.title.catalog__title All Campaigns
+//- 				.catalog__filters
+					
+//- 					.catalog__filters-item
+//- 						.catalog-filter.js-catalog-filter.js-accordion
+//- 							.catalog-filter__title.js-catalog-filter-title.js-accordion-toggle Filter by Category
+//- 							.js-accordion-content.js-catalog-filter-options-list
+//- 								.catalog-filter__options-wrap
+//- 									.catalog-filter__options-list
+//- 										.catalog-filter__option.catalog-filter__option_is-active All
+//- 										.catalog-filter__option Sport &amp; Lifstale
+//- 										.catalog-filter__option Food
+//- 										.catalog-filter__option Gadget
+					
+//- 					.catalog__filters-item
+//- 						.catalog-filter.js-catalog-filter.js-accordion
+//- 							.catalog-filter__title.js-catalog-filter-title.js-accordion-toggle Filter by Price
+//- 							.js-accordion-content.js-catalog-filter-options-list
+//- 								.catalog-filter__options-wrap
+//- 									.catalog-filter__options-list
+//- 										.catalog-filter__option.catalog-filter__option_is-active All
+//- 										.catalog-filter__option Sport &amp; Lifstale
+//- 										.catalog-filter__option Food
+//- 										.catalog-filter__option Gadget
+
+//- 					.catalog__filters-item
+//- 						.catalog-filter.js-catalog-filter.js-accordion
+//- 							.catalog-filter__title.js-catalog-filter-title.js-accordion-toggle Newest to Oldest
+//- 							.js-accordion-content.js-catalog-filter-options-list
+//- 								.catalog-filter__options-wrap
+//- 									.catalog-filter__options-list
+//- 										.catalog-filter__option.catalog-filter__option_is-active All
+//- 										.catalog-filter__option Sport &amp; Lifstale
+//- 										.catalog-filter__option Food
+//- 										.catalog-filter__option Gadget
+			
+//- 			.catalog__body
+//- 				include ../../blocks/catalog-list/catalog-list.pug
