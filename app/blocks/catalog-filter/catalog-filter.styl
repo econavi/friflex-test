@@ -17,35 +17,35 @@ $filter-border-width = 1px
 		display block
 		width 100%
 		margin 0
-		padding 0
-		border none
-		background none
-		font inherit
-
-		padding 5px
+		padding 7px
 		padding-right 26px
+		padding-left 3px
 		
-		overflow hidden
-		
+		font inherit
+		line-height 1.4
 		white-space nowrap
 		text-overflow ellipsis
-		
+		text-align left
+
 		color $cool-grey
+		background none
+		border none
 		border-bottom $filter-border-width solid $cool-grey
 		
 		transition color $transition-default
 		
 		cursor pointer
 		user-select none
+		overflow hidden
 		
 		&::after
 			content ''
 			position absolute
 			top 50%
-			right 13px
+			right 15px
 			
-			width 13px
-			height 13px
+			width 10px
+			height 10px
 			
 			border-bottom 2px solid $cool-grey
 			border-right 2px solid $cool-grey
@@ -61,6 +61,10 @@ $filter-border-width = 1px
 				&::after
 					border-bottom-color $charcoal-grey
 					border-right-color $charcoal-grey
+		
+		+media($screen-xxl)
+			padding-left 7px
+			letter-spacing 0.5px
 	
 	&_is-active &__header
 		color $charcoal-grey
@@ -85,6 +89,7 @@ $filter-border-width = 1px
 
 	&__options-list
 		position relative
+		
 		padding 8px
 		margin-top 15px
 		
@@ -110,6 +115,7 @@ $filter-border-width = 1px
 	&__option
 		position relative
 		z-index 999
+		
 		padding 5px 15px
 		margin-bottom 2px
 		
@@ -127,6 +133,9 @@ $filter-border-width = 1px
 			
 			&:hover
 				background darken($color-main-bg, 2%)
+		
+		+media($screen-xxl)
+			padding 0 20px
 	
 		&_is-active
 			background darken($color-main-bg, 2%)

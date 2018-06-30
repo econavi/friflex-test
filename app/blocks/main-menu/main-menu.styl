@@ -7,6 +7,9 @@
 		
 		+media($screen-mid)
 			text-align right
+		
+		+media($screen-xxl)
+			text-align center	
 	
 	&__item
 		display block
@@ -42,6 +45,12 @@
 		+media($screen-xl)
 			&:last-child
 				padding-right 30px
+		
+		+media($screen-xxl)
+			padding-right 48px
+			padding-left 48px
+			&:last-child
+				padding-right 48px
 		
 		&_active
 			position relative

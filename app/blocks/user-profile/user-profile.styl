@@ -25,6 +25,13 @@
 		display flex
 		align-items center
 	
+	+media($screen-xxl)
+		padding-right 22px
+		
+		font-size $font-lg
+		fontFamyli($font-default-medium)
+		font-weight 500
+	
 	&::after
 		content ''
 		display none
@@ -49,9 +56,10 @@
 		vertical-align middle
 		margin-right 10px
 		text-align left
-		
 		// Хак под safari, иначе не умещает display inline-block и разбивает строку
 		letter-spacing 0.1px
+		+media($screen-xxl)
+			margin-right 16px
 	
 	&__avatar
 		display inline-block

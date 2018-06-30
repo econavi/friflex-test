@@ -1,30 +1,4 @@
-// - Обеспечивайте согласованность иерархии при именовании 
-// (например, $font-primary, $heading-primary или же $font-family-1, $heading-1 и т.д. ).
-// - Используйте суффиксы base или default там, где это имеет смысл 
-// (например, $color-font-base, $box-shadow-base и т.д.).
-// - Группируйте схожие переменные с помощью общих ключевых слов 
-// ($font-family-1, $font-size-base, $font-bold и т.д.).
-
-// http://prgssr.ru/development/peremennye-osnova-arhitektury-css.html
-
-// $green-pista = #93c572
-// $blue-ink = #000f55
-// $red-velvet = #d22836
-
-// $color-state-success = $green-pista
-// $color-state-info = $blue-ink
-// $color-state-error = $red-velvet
-
-
-
-// VARIABLES: GLOBAL
-
-/*-------------------------------------*/
-
 // GRID
-
-// Grid: Gutters
-// $grid-gutter = 15px
 
 $fields-container = 16px
 $fields-container-desktop = 99px
@@ -32,31 +6,7 @@ $max-width-container = 1440px
 
 /*-------------------------------------*/
 
-// DIMENSIONS: WIDTHS, HEIGHTS
-// Переменные для измерений
-
-// $height-header
-// $width-nav
-// $height-form-widget
-
-/*-------------------------------------*/
-
-// SPACING
-// Переменные для пространства: внутренние и внешние отступы
-
-// $spacing-padding 
-// $spacing-margin
-
-// $spacing = 10px
-
-// $spacing-half = $spacing / 2
-// $spacing-double = $spacing * 2
-// $spacing-third = $spacing * 3
-
-/*-------------------------------------*/
-
 // COLORS
-// Переменные для цвета
 
 $white = #ffffff
 $black = #333333
@@ -81,71 +31,15 @@ $color-shevron-hover = darken($pinkish-grey, 20%)
 $color-bg-popup-menu = $white
 
 
-/* Colors: States */
-// $color-state-success
-// $color-state-info
-// $color-state-error
-
-/* Colors: Links */
-// $color-link = $color-brand-1
-// $color-link-hover = darken($link-color, 15%)
-
-/* Colors: Common: Cool */
-// $green-pista
-// $green-mint
-
-/* Colors: Common: Warm */
-// $blue-cornflour
-// $blue-turquoise
-
-/* Colors: Brands for Social Media */
-// $blue-facebook
-// $blue-twitter
-// $red-youtube
-
 /*-------------------------------------*/
 
 // Z:INDEX
+
 $zindex-page-header = 1000
 $zindex-switcher-menu = 1100
-// $zindex-dropdown = 1100
-// $zindex-lib-select2 = 1200
-// $zindex-notify = 1300
-// $zindex-modal = 1400
-
-/*-------------------------------------*/
-
-// BORDER-RADIUS
-// Переменные для border-radius
-
-// $border-radius = 5px
-// $border-radius-half = $border-radius / 2
-// $border-radius-double = $border-radius * 2
-
-/*-------------------------------------*/
-
-// BOX-SHADOW
-// Переменные для тени
-// $box-shadow-base 2px 2px 4px rgba(0, 0, 0, 0.1)
 
 
 /*-------------------------------------*/
-
-// FONTS
-// Переменные для типографики
-
-// Fonts: Base styles
-// $font-default = montserrat-regular
-// $font-default-italic = montserrat-italic
-
-// $font-default-semibold = montserrat-semibold
-// $font-default-semibold-italic = montserrat-semibolditalic
-
-// $font-default-bold = montserrat-bold
-// $font-default-bold-italic = montserrat-bolditalic
-
-// $font-family-2 = 'Playfair Display', sans-serif
-// $font-size-base = 100% // or px / em / rem
 
 // Fonts: Sizes
 $font-sm = 1.1rem
@@ -153,17 +47,6 @@ $font-md = 1.2rem
 $font-lg = 1.4rem
 $font-xl = 1.6rem
 $font-xxl = 2.2rem
-
-// Fonts: Weights
-// $font-thin = 100
-// $font-extra-light = 200
-// $font-light = 300
-// $font-normal = 400
-// $font-medium = 500
-// $font-semi-bold = 600
-// $font-bold = 700
-// $font-extra-bold = 800
-// $font-ultra-bold = 900
 
 /*-------------------------------------*/
 
@@ -191,6 +74,4 @@ media($screen)
 
 // ANIMATION
 
-// $box-shadow-hover = 0 0 0 1px $color-brand
-// $scale-hover-default = 1.04
 $transition-default = 0.3s

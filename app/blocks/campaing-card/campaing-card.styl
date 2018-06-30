@@ -1,10 +1,10 @@
 $ic-fb-shape = "data:image/svg+xml,%3Csvg width='7' height='11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.1 6.1875H0V4.125h2.1V2.75C2.1.8943 3.270057 0 4.955566 0c.807373 0 1.501276.05903562 1.703492.08542187V2.0247356l-1.168986.0005225c-.916671 0-1.094163.4278107-1.094163 1.0555944V4.125H7l-.7 2.0625H4.395902V11H2.116051L2.1 6.1875z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E"
 
 campaing-card-container()
-	padding 0 16px
+	padding 0 20px
 
 .campaing-card
-	padding-top 22px
+	padding-top 20px
 	padding-bottom 25px
 	
 	background #fff
@@ -12,6 +12,7 @@ campaing-card-container()
 	
 	&__header
 		position relative
+		
 		campaing-card-container()
 		padding-right 50px
 		
@@ -31,14 +32,18 @@ campaing-card-container()
 		
 		&:hover
 			background-color lighten($color-brand, 20%)
+		
+		+media($screen-xxl)
+			right 26px
 	
 	&__title
 		margin-top 0
-		margin-bottom 11px
+		margin-bottom 15px
 
-		fontFamily($font-default-medium)
+		fontFamily($font-default-regular)
 		font-size $font-xl
 		line-height normal
+		letter-spacing -0.2px
 		
 		color $color-titles-default
 	
@@ -52,7 +57,7 @@ campaing-card-container()
 	
 	&__props-item
 		display flex
-		margin-bottom 6px
+		margin-bottom 8px
 	
 	&__props-name
 		margin-right 5.4px
@@ -63,7 +68,7 @@ campaing-card-container()
 		color $charcoal-grey
 		
 	&__picture
-		margin-bottom 14px
+		margin-bottom 6px
 		
 	&__picture img	
 		width 100%
@@ -71,41 +76,62 @@ campaing-card-container()
 	
 	&__body
 		campaing-card-container()
-		padding-bottom 30px
+		padding-bottom 10px
+		
 		font-size $font-lg
+		
 		border-bottom 1px solid #f0f0f0
+		
+		+media($screen-xxl)
+			padding-bottom 3px
 
 	&__description-title
 		margin-top 0
 		margin-bottom 10px
 		
+		font-size $font-lg
 		line-height 1.43
+		letter-spacing 0.5px
+
 		color $cool-grey
 	
 	&__description-text
 		margin 0
-		line-height 1.57
+		
+		fontFamily($font-default-medium)
+		line-height 1.6
+		letter-spacing 0.3px
+		
 		color $charcoal-grey
 	
 	&__footer
 		campaing-card-container()
 		padding-top 14px
+		
 		text-align center
 
 	&__rider-list
 		margin-top 0
-		margin-bottom 21px
+		margin-bottom 15px
 
-		fontFamily($font-default-medium)
+		fontFamily($font-default-regular)
 		font-size $font-lg
 		line-height 1.43
 		
 		color $charcoal-grey
+		
+		+media($screen-xxl)
+			display flex
+			justify-content space-between
 	
 	&__rider-item
 		display flex
 		justify-content center
 		margin-bottom 5px
+		
+		+media($screen-xxl)
+			&:last-child
+				margin-right 25px
 	
 	&__rider-name
 		margin-right 6px
@@ -115,6 +141,7 @@ campaing-card-container()
 	
 	&__respond-btn
 		display inline-block
+		
 		fontFamily($font-default-bold)
 		font-size $font-md
 		line-height 1.33

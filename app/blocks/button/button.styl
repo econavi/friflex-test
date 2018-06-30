@@ -5,7 +5,7 @@ $color-button = $color-brand
 	display inline-block
 	vertical-align top
 	width auto
-	padding 9px 42px 12px
+	padding 10px 42px
 	
 	font inherit
 	font-weight bold
@@ -46,24 +46,23 @@ $color-button = $color-brand
 		&:active
 			background none
 	
-.button
 	&_reverse-color,
 	&_reverse-color:hover
 		background $color-button
 		color #fff
 	
-	&:active
-		background none
-		color $color-button
-	
-	+media($screen-mid)
-		&:hover
+		&:active
 			background none
 			color $color-button
-		
-		&:active
-			background $color-button
-			color #fff
+	
+		+media($screen-mid)
+			&:hover
+				background none
+				color $color-button
+			
+			&:active
+				background $color-button
+				color #fff
 
 
 
