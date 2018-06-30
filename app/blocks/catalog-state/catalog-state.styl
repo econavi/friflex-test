@@ -1,0 +1,55 @@
+.catalog-state
+	display none
+	padding 286px 20px 30px
+	
+	font-size $font-lg
+	line-height 1.43
+	
+	text-align center
+	
+	background-size 288px auto
+	background-repeat no-repeat
+	background-position 50% top
+	
+	+media($screen-lg)
+		padding-top 500px
+		background-size 550px auto
+	
+	&__state
+		display none
+
+	&__message
+		color $cool-grey
+		
+		& p
+			margin 0
+	
+	&__button
+		margin-top 60px
+		
+		fontFamily($font-default-bold)
+		font-weight 700
+		
+		font-size $font-md
+		line-height 1.33
+
+	&_is-empty
+		& .catalog__list
+			display none
+		
+		& .catalog-state
+			display block
+
+	&_is-empty-1 
+		& .catalog-state
+			background-image url('../assets/img/general/catalog-is-empty-first-state.svg')
+		
+		& .catalog-state__state.state-one
+			display block
+
+	&_is-empty-2 
+		& .catalog-state
+			background-image url('../assets/img/general/catalog-is-empty-second-state.svg')
+		
+		& .catalog-state__state.state-two
+			display block

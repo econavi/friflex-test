@@ -1,10 +1,10 @@
 $transition-button-hover = $transition-default
 $color-button = $color-brand
 
-
 .button
 	display inline-block
 	vertical-align top
+	width auto
 	padding 9px 42px 12px
 	
 	font inherit
@@ -28,6 +28,14 @@ $color-button = $color-brand
 		cursor default
 		opacity 0.3
 	
+	&:hover
+		border-color $color-button
+		background none
+		
+	&:active
+		background $color-button
+		color #fff
+	
 	+media($screen-mid)
 	
 		&:hover
@@ -38,3 +46,38 @@ $color-button = $color-brand
 		&:active
 			background none
 	
+.button
+	&_reverse-color,
+	&_reverse-color:hover
+		background $color-button
+		color #fff
+	
+	&:active
+		background none
+		color $color-button
+	
+	+media($screen-mid)
+		&:hover
+			background none
+			color $color-button
+		
+		&:active
+			background $color-button
+			color #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
