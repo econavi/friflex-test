@@ -12,15 +12,15 @@
 			padding-bottom 13px
 			margin-bottom 0
 	
-	&__title
+	&__title		
+		+media($screen-mid)
+			position relative
+			top 17px
+		
 		+media($screen-lg)
 			margin-right 66px
 			white-space nowrap
 			letter-spacing -0.2px
-		
-		+media($screen-xxl)
-			position relative
-			top 17px
 	
 	&__filters
 		flex 1
