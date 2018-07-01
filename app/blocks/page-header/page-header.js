@@ -11,6 +11,14 @@ switcher.addEventListener('click', switcherHundler);
 function switcherHundler() {
 	switcher.classList.toggle(classSwitcherActive);
 	menu.classList.toggle(classMenuIsSowed)
+
+	if(menu.classList.contains(classMenuIsSowed)) {
+		switcher.style.position = 'fixed';
+		document.body.style.overflow = 'hidden';
+	} else {
+		switcher.style.position = 'relative';
+		document.body.style.overflow = '';
+	}
 }
 
 function cl(data) {
